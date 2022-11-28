@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/CSS/style.css">
+        <div class="container-fluid">
+            <div class="row d-sm-flex d-md-flex d-lg-flex">
+                <div class="col-md-3">
+                    <ul class="list-items p-5 m-5">
+                        {% for data in dataWeather %}
+                        <li class="items"><a href="/data/{{data.id}}">{{data.city}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-6 bg-info">
+                    <h3 class="heading p-2 m-2 w-100 d-block text-sm-center">Current Weather of the Nearby Cities</h3>
+                    {% for data in dataWeather %}
+                    <div class="card w-100 m-2" style="height: 50px;">
+                        <div class="card-body">
+                            <div class="row">
+                                
+                                <div class="col-md-6"><h5 class="card-title">{{data.city}}</h5></div>
+                                <div class="col-md-6"><h5 class="card-title" style="margin-left: 50%;">{{data.curr_temp}}</h5></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-3 text-center"><h3 class="heading p-2 m-2">Text Here</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime et, minima hic eveniet illum tempore nam harum dignissimos facilis praesentium, animi beatae nihil aliquam, officiis voluptatibus fuga deserunt reiciendis soluta rerum blanditiis aspernatur culpa cumque! Minus amet aperiam tempora illo corrupti fugiat velit iure blanditiis perferendis sed quidem qui, dolorem, commodi nostrum at, mollitia fuga. Vero eveniet quos eum eius illum doloremque similique iste cum! Culpa ducimus animi magnam enim quae dolores est quas tempore odit laborum? Vitae rerum voluptatibus id blanditiis ratione deserunt eius sed, cum quidem. Laboriosam consequatur neque eos tempore id deserunt dignissimos dolor ab magni vel repudiandae, distinctio numquam, in nostrum molestias earum recusandae placeat beatae perferendis provident mollitia! Exercitationem fuga maxime repudiandae labore possimus excepturi esse, hic, ipsum ratione praesentium qui voluptates dignissimos nihil sunt obcaecati culpa provident aut ea? Repudiandae adipisci consequuntur accusamus perferendis debitis blanditiis saepe dicta perspiciatis quis animi quas ut, tenetur illum, distinctio reiciendis iure laboriosam incidunt minus! Obcaecati aliquid ullam molestiae magnam ducimus error laudantium dolorum fuga? Illo quisquam, asperiores totam ducimus animi pariatur porro iusto! Veniam, quos fuga veritatis odit enim beatae natus obcaecati reiciendis saepe explicabo! Sint a sequi pariatur accusantium nostrum laudantium odit aliquid esse perferendis tenetur.</p></div>
+            </div>
+        </div>
+{% endblock %}

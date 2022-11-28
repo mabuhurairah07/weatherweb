@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+    <!-- <div class="container bg-dark" style="width: 100vw;"> -->
+      {% block content %}
+      <link rel="stylesheet" href="/static/CSS/style.css">
+        <div class="container-fluid bg-success p-3">
+           <div class="text container bg-light mt-5 p-3 w-50">
+                <div class="row d-lg-flex d-md-flex d-sm-flex m-3 p-3">
+                    <div class="col-sm-6 text-center mt-5 pt-5"><h1 class="city_heading">{{dataWeather.city}}</h1></div>
+                    <div class="col-sm-6 text-center mt-5 pt-5"><h1 class="heading">{{dataWeather.curr_temp}}</h1></div>
+                    <p class="para text-center m-1 p-1">This is the Temperature of your city right now.This site refreshes the temperature after every <b>2 minutes</b>.So be in touch with us to see the <b>accurate temperature</b> of your city according to <b>current time</b>.This is the best site to see the <b>weather</b> of your city and near by cities.<b>Be Patient!</b> We are still working to make this site more <b>accurate</b></p>
+                    <a href="/index" class="link text-center mb-5 pb-5 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                      </svg>Back To Main</a>
+                </div>
+
+           </div>
+        </div>
+        {% endblock %}
+    <!-- </div> -->
